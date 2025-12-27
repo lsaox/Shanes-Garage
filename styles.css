@@ -465,3 +465,15 @@
     letter-spacing: 1.5px;
   }
 }
+@media (max-width: 768px) {
+  .hero-mobile-img {
+    transform: scale(1.2);   /* small, tasteful zoom */
+    transform-origin: center;transform: scale(1.05);
+
+  }
+}
+/* GLOBAL HEADERS — ORBITRON */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif !important;
+  letter-spacing: 1px;
+}
