@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shane’s Garages</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papbZ9/kZ8N0LQdxX2i5LjPE9o9Toc1a1LZh06Jn3FvP1JoKdx0cIvG1aKzhnkM1zz/0r0HgT0kZqBebk63Tmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+
+
+
+
+  <style>
+    body {
+      margin: 0;
+      background: #a30000;
+    }
+
+    /* DESKTOP NAVBAR */
+    .custom-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0px 0;
+      background: rgba(163, 0, 0, 0.945);
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* Add spacing to About */
+.nav-left a:last-child {
+  margin-left: 70px;
+}
+/* Add spacing to Inventory link on desktop */
+.nav-right a:first-child {
+  margin-right: 70px; /* adjust as needed */
+}
+.nav-links a:hover {
+  opacity: 0.85;
+}
+
+    .nav-links a:hover {
+      opacity: 0.85;
+    }
+
+    .nav-logo img {
+      height: 185px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 110vh;
+      background: url("assets/Shanes Garages (29).png") center / cover no-repeat;
+      padding-top: 160px;
+      position: relative;
+    }
+
+    /* MOBILE HERO IMAGE */
+    .hero-mobile-img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    /* MOBILE STYLES */
+    @media (max-width: 768px) {
+      /* Hide desktop navbar */
+      .custom-nav { display: none; }
+
+      /* Mobile nav logo above hero */
+      .mobile-nav {
+        background: transparent !important;
+        justify-content: center;
+        padding: 20px 0;
+        position: relative; /* not fixed */
+      }
+
+      .mobile-nav .navbar-brand {
+        margin: 0 auto;
+        display: block;
+      }
+
+      .mobile-nav img {
+        height: 160px; /* bigger logo */
+      }
+
+      .navbar-toggler {
+        border: none;
+        color: #fff;
+        margin-top: 10px;
+      }
+
+      /* Hero adjustments */
+      .hero {
+        background: none;
+        height: auto;
+        padding-top: 0;
+      }
+
+      .hero-mobile-img {
+        display: block;
+      }
+
+      .collapse.navbar-collapse {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .navbar-nav .nav-link {
+        margin: 5px 0;
+      }
+
+      
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DESKTOP NAV -->
+  <!-- DESKTOP NAV -->
+<nav class="custom-nav d-none d-lg-flex">
+  <div class="nav-inner">
+    <div class="nav-links nav-left">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+    </div>
+
+    <div class="nav-logo">
+      <img src="assets/logo2.png" alt="Shane’s Garage Logo">
+    </div>
+
+    <div class="nav-links nav-right">
+      <a href="#">Inventory</a>
+      <a href="#">Contact</a>
+      <!-- Instagram Icon -->
+      <a href="https://www.instagram.com/shanesgarage_" target="_blank" class="instagram-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav navbar navbar-expand-lg d-flex d-lg-none">
+    <div class="container-fluid flex-column align-items-center">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo2.png" alt="Shane’s Garage Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mobileMenu">
+        <ul class="navbar-nav mb-2 mb-lg-0 text-center">
+          <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Inventory</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <img src="assets/Shanes Garages (26).png" alt="Shane’s Garage" class="hero-mobile-img">
+  </section>
+<!-- ABOUT US SECTION -->
+<!-- ABOUT US SECTION -->
+<section class="about-us-section text-center">
+  <div class="about-us-overlay">
+    <div class="about-us-content">
+      <h2>Welcome to Specialty Cars of Florida</h2>
+      <p>
+        Specialty Cars of Florida is a family-owned, father-and-son classic car dealership focused on vintage 4x4 trucks, early Ford Broncos, and iconic American muscle cars. We buy, sell, and restore carefully selected vehicles with an emphasis on quality, originality, and drivability.
+      </p>
+<a href="#inventory" class="btn btn-danger btn-lg mt-3 inventory-btn">
+  View Inventory <i class="fas fa-arrow-right inventory-arrow ms-2"></i>
+</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ABOUT US SECTION */
+.about-us-section {
+  position: relative;
+  background: url('assets/aboutus.png') center / cover no-repeat;
+  padding: 8rem 1rem;
+  color: #fff;
+}
+
+.about-us-overlay {
+  background: rgba(144, 0, 0, 0.5); /* dark overlay for readability */
+  padding: 5rem 1rem;
+}
+
+.about-us-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us-section h2 {
+  font-family: 'Rocket Thunder', sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: .5rem;
+}
+
+.about-us-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.about-us-section .btn {
+  font-family: 'Rocket Thunder', sans-serif;
+  font-size: 1.3rem;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.about-us-section .btn:hover {
+  transform: translateY(-3px);
+}
+/* Inventory button customization */
+.about-us-section .inventory-btn {
+  font-family: 'Rocket Thunder', sans-serif;
+  font-size: 2rem;       /* bigger font */
+  padding: 1rem 3rem;    /* bigger button */
+  transition: all 0.3s ease;
+}
+
+.about-us-section .inventory-btn i {
+  font-size: 1.5rem;     /* arrow size */
+  transition: transform 0.3s ease;
+}
+
+.about-us-section .inventory-btn:hover {
+  transform: translateY(-3px);
+}
+
+.about-us-section .inventory-btn:hover i {
+  transform: translateX(5px); /* arrow slides slightly on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<!-- CONTACT US SECTION WITH BACKGROUND IMAGE -->
+
+
+
+
+<!-- GOOGLE FONT FOR HEADLINE -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* FEATURES SECTION */
+.features-section {
+  padding: 90px 20px 60px;
+  background-color: #f6f0e5;
+  text-align: center;
+}
+
+/* HEADLINE */
+.features-section h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  color: #4b0d0d;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* FEATURES GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+/* FEATURE ITEM */
+.feature-item {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.feature-icon {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 25px;
+  border: 6px solid #8f422a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon span {
+  font-size: 3rem;
+  color: #8f2d2a;
+}
+
+.feature-item h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem;
+  color: #4b0d0d;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3a2a2a;
+}
+</style>
+
+<section class="features-section">
+  <h2>Top Quality Vintage Vehicles<br>Without the Showroom Price</h2>
+
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-icon"><span>📍</span></div>
+      <h3>ON-SITE SALES</h3>
+      <p>
+        Experience classic vehicles up close — review, test, and purchase
+        all in one place at our on-site dealership.
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon"><span>$</span></div>
+      <h3>COMPETITIVE PRICING</h3>
+      <p>
+        We price vehicles to sell, not sit on a showroom floor.
+        If you see something you like, don’t wait.
+      </p>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon"><span>✓</span></div>
+      <h3>QUALITY YOU CAN COUNT ON</h3>
+      <p>
+      Every vehicle we offer is thoroughly inspected and guaranteed for excellence.
+      </p>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-pM7qgPz1pLz3kjE4T7uFkcohG9f3I2YcNq+JwGz+g4xC4VklMq+/Yx3p+Z9dS/1qRo+aFRm2Ff2BBb3JDBxI5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<section class="hero-section">
+  <div class="overlay"></div>
+
+  <!-- Left side content -->
+  <div class="hero-left">
+    <h2>Florida’s Best in Builds & New Cars</h2>
+    <p>
+      From custom builds to the latest models, every vehicle is handpicked, inspected, and ready to impress. Discover quality, style, and performance all in one place.
+    </p>
+    <a href="https://www.instagram.com/shanesgarage_" target="_blank">
+      <i class="fab fa-instagram"></i> Follow Us
+    </a>
+  </div>
+
+  <!-- Right side (just background photo) -->
+  <div class="hero-right"></div>
+</section>
+
+<style>
+.hero-section {
+  display: flex;
+  height: 650px;
+  position: relative;
+}
+
+/* Overlay to darken background */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.048);
+  z-index: 1;
+}
+
+/* Left side */
+.hero-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically centered */
+  align-items: center;     /* horizontally centered */
+  color: white;
+  font-family: 'Rocket Thunder', sans-serif;
+  padding: 0 40px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+.hero-left h2 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  font-family: oswald, sans-serif;
+}
+
+.hero-left a {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-left i {
+  margin-right: 10px;
+  font-size: 2.5rem;
+}
+
+/* Right side */
+.hero-right {
+  width: 50%;
+  background: url('assets/affirm6.png') center/cover no-repeat;
+}
+
+/* Hide section on mobile */
+@media (max-width: 768px) {
+  .hero-section {
+    display: none;
+  }
+}
+</style>
+
+
+
+
+
+
+<style>
+@font-face {
+  font-family: 'Rocket Thunder';
+  src: url('assets/fonts/rocket-thunder.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CONTACT SECTION — COMPACT */
+.contact-us-section {
+  position: relative;
+  padding: 70px 20px; /* was 120px */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.651), rgba(248, 248, 248, 0.034)),
+    url('assets/Shanes Garages (16).png') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+/* CONTENT BOX */
+.contact-box {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  max-width: 700px; /* slightly smaller */
+  margin: 0 auto;
+  padding: 2rem; /* was 3rem */
+  backdrop-filter: blur(2px);
+}
+
+/* TEXT */
+.contact-us-section h2 {
+  font-family: 'Rocket Thunder', sans-serif;
+  font-size: 2.4rem; /* was 3rem */
+  margin-bottom: 0.75rem;
+}
+
+.contact-us-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* FORM INPUTS */
+.contact-form .form-control {
+  background: rgba(0, 0, 0, 0.08);
+  border: none;
+  border-radius: 6px;
+  color: #000000;
+  padding: 10px; /* slightly tighter */
+}
+
+/* BUTTON */
+.contact-btn {
+  font-family: 'Rocket Thunder', sans-serif;
+  font-size: 1.6rem; /* was 2rem */
+  padding: 0.75rem 2.5rem; /* smaller button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8f100b;
+  color: #FFE08F;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn .contact-arrow {
+  font-size: 1.3rem;
+  margin-left: 8px;
+}
+
+
+.contact-btn:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.contact-btn:hover .contact-arrow {
+  transform: translateX(5px);
+}
+</style>
+
+
+
+
+
+
+
+<!-- INVENTORY SECTION -->
+<section class="inventory-section" id="inventory">
+  <h2 class="inventory-title">Current Inventory</h2>
+
+  <div class="inventory-grid">
+
+    <!-- 1 -->
+    <div class="inventory-card">
+      <div class="inventory-slider square" data-index="0">
+        <img src="assets/red truck2.jpeg" class="active">
+        <img src="assets/red truck3.jpeg">
+         <img src="assets/red truck.jpeg">
+        <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+        <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+        <div class="inventory-overlay">
+          <h3>1998 Chevrolet K1500</h3>
+          <span>72k Miles • One Owner</span>
+        </div>
+      </div>
+      <div class="inventory-info">
+        <ul>
+          <li>318 CI V8 • 3-Speed Automatic</li>
+          <li>4WD • 6” Lift • Frame-Up Restoration</li>
+          <li>Red / Red Interior</li>
+        </ul>
+        <div class="inventory-price">$26,500</div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="inventory-card">
+      <div class="inventory-slider square" data-index="0">
+        <img src="assets/grey.jpeg" class="active">
+        <img src="assets/grey2.jpeg">
+      
+        <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+        <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+        <div class="inventory-overlay">
+          <h3>1999 Chevrolet Tahoe LT</h3>
+          <span>136k Miles</span>
+        </div>
+      </div>
+      <div class="inventory-info">
+        <ul>
+          <li>5.7L Vortec V8</li>
+          <li>LT Package • Split Tailgate</li>
+          <li>Runs & Drives Excellent</li>
+        </ul>
+        <div class="inventory-price">$18,900</div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="inventory-card">
+      <div class="inventory-slider square" data-index="0">
+        <img src="assets/black.jpeg" class="active">
+        <img src="assets/black2.jpeg">
+         <img src="assets/black3.jpeg">
+        <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+        <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+        <div class="inventory-overlay">
+          <h3>1990 GMC Sierra K2500</h3>
+          <span>130k Miles</span>
+        </div>
+      </div>
+      <div class="inventory-info">
+        <ul>
+          <li>K2500 Heavy Duty</li>
+          <li>Classic 4x4 Truck</li>
+        </ul>
+        <div class="inventory-price">Call for Price</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="inventory-card">
+      <div class="inventory-slider square" data-index="0">
+        <img src="assets/brown.jpeg" class="active">
+        <img src="assets/brown2.jpeg">
+        
+        <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+        <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+        <div class="inventory-overlay">
+          <h3>1990 Ford Bronco XLT</h3>
+          <span>135k Miles</span>
+        </div>
+      </div>
+      <div class="inventory-info">
+        <ul>
+          <li>5.0L EFI V8 • Automatic OD</li>
+          <li>4WD • Factory A/C</li>
+          <li>Fully Serviced</li>
+        </ul>
+        <div class="inventory-price">$20,000</div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="inventory-card">
+      <div class="inventory-slider square" data-index="0">
+        <img src="assets/silv.jpeg" class="active">
+        <img src="assets/silv2.jpeg">
+         <img src="assets/silv3.jpeg">
+        <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+        <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+        <div class="inventory-overlay">
+          <h3>1998 Silverado Z71</h3>
+          <span>125k Miles • 1 Owner</span>
+        </div>
+      </div>
+      <div class="inventory-info">
+        <ul>
+          <li>All Original Survivor</li>
+          <li>5.7 Vortec • Push-Button 4x4</li>
+          <li>Extended Cab • Z71</li>
+        </ul>
+        <div class="inventory-price">$22,500</div>
+      </div>
+    </div>
+<div class="inventory-card">
+  <div class="inventory-slider square" data-index="0">
+    <img src="assets/yellow1.jpeg" class="active">
+    <img src="assets/yellow.jpeg">
+    <img src="assets/Yellow3.jpeg">
+
+    <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+    <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+
+    <div class="inventory-overlay">
+      <h3>1950 Nash Ambassador Super Sedan</h3>
+      <span>36,000 Original Miles</span>
+    </div>
+  </div>
+
+  <div class="inventory-info">
+    <ul>
+      <li>Straight 6 • 3 on the Tree</li>
+      <li>Stunning Original Survivor</li>
+      <li>Wide White Walls • Excellent Chrome</li>
+      <li>Private Collection</li>
+      <li>Melbourne, FL 32940</li>
+    </ul>
+    <div class="inventory-price">$17,500</div>
+  </div>
+</div>
+<div class="inventory-card">
+  <div class="inventory-slider square" data-index="0">
+    <img src="assets/blue.jpeg" class="active">
+    <img src="assets/blue2.jpeg">
+    <img src="assets/blue3.jpeg">
+   <img src="assets/blue4.jpeg">
+    <img src="assets/blue5.jpeg">
+    <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+    <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+
+    <div class="inventory-overlay">
+      <h3>1990 Jeep Grand Wagoneer</h3>
+      <span>33k Miles • One Owner</span>
+    </div>
+  </div>
+
+  <div class="inventory-info">
+    <ul>
+      <li>Original Survivor</li>
+      <li>Garaged From New</li>
+      <li>Collector Quality</li>
+      <li>Coming Soon</li>
+    </ul>
+    <div class="inventory-price">$55,000</div>
+  </div>
+</div>
+
+<div class="inventory-card">
+  <div class="inventory-slider square" data-index="0">
+    <img src="assets/cov12.jpeg" class="active">
+    <img src="assets/cov1.jpeg">
+    <img src="assets/cov3.jpeg">
+    <img src="assets/cov.jpeg">
+    <button class="slider-btn prev" onclick="slideCar(this,-1)">‹</button>
+    <button class="slider-btn next" onclick="slideCar(this,1)">›</button>
+
+    <div class="inventory-overlay">
+      <h3>1973 Corvette Convertible</h3>
+      <span>79k Original Miles</span>
+    </div>
+  </div>
+
+  <div class="inventory-info">
+    <ul>
+      <li>Numbers Matching Drivetrain</li>
+      <li>350 / 270 HP</li>
+      <li>Turbo Automatic</li>
+      <li>Family Owned (1973–2025)</li>
+      <li>White / Red / White Top</li>
+      <li>Melbourne, FL</li>
+    </ul>
+    <div class="inventory-price">$27,500</div>
+  </div>
+</div>
+
+
+
+</section>
+
+
+<section class="sold-inventory-section">
+  <h2 class="inventory-title">Recently Sold</h2>
+
+  <div class="inventory-grid">
+
+    <!-- 1972 Chevrolet C10 -->
+    <div class="inventory-card sold-card">
+      <div class="inventory-slider square">
+        <img src="assets/cream.jpeg" class="active">
+        <div class="sold-overlay"></div>
+        <div class="sold-stamp">SOLD</div>
+      </div>
+      <div class="inventory-info text-center">
+        <h3>1972 Chevrolet C10</h3>
+        <ul>
+          <li>5.3 LS Swap</li>
+          <li>TMI Interior</li>
+          <li>Vintage Air & Heat</li>
+          <li>Cheyenne Trim</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1994 Chevrolet K1500 Silverado -->
+    <div class="inventory-card sold-card">
+      <div class="inventory-slider square">
+        <img src="assets/truck.jpeg" class="active">
+        <div class="sold-overlay"></div>
+        <div class="sold-stamp">SOLD</div>
+      </div>
+      <div class="inventory-info text-center">
+        <h3>1994 Chevrolet K1500 Silverado</h3>
+        <ul>
+          <li>21k Miles</li>
+          <li>Z71 Off-Road</li>
+          <li>Bucket Seats & Console</li>
+          <li>Showroom New</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2005 Chevrolet Silverado -->
+    <div class="inventory-card sold-card">
+      <div class="inventory-slider square">
+        <img src="assets/truck2.jpeg" class="active">
+        <div class="sold-overlay"></div>
+        <div class="sold-stamp">SOLD</div>
+      </div>
+      <div class="inventory-info text-center">
+        <h3>2005 Chevrolet Silverado</h3>
+        <ul>
+          <li>One Owner</li>
+          <li>Regular Cab Short Bed</li>
+          <li>68k Miles</li>
+          <li>5.3 V8 • 4x4</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1995 Chevrolet Tahoe -->
+    <div class="inventory-card sold-card">
+      <div class="inventory-slider square">
+        <img src="assets/truck3.jpeg" class="active">
+        <div class="sold-overlay"></div>
+        <div class="sold-stamp">SOLD</div>
+      </div>
+      <div class="inventory-info text-center">
+        <h3>1995 Chevrolet Tahoe</h3>
+        <ul>
+          <li>88k Miles</li>
+          <li>One Family Owned</li>
+          <li>5.7 TBI V8</li>
+          <li>Original Condition</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1987 Chevrolet K20 -->
+    <div class="inventory-card sold-card">
+      <div class="inventory-slider square">
+        <img src="assets/truck4.jpeg" class="active">
+        <div class="sold-overlay"></div>
+        <div class="sold-stamp">SOLD</div>
+      </div>
+      <div class="inventory-info text-center">
+        <h3>1987 Chevrolet K20</h3>
+        <ul>
+          <li>5.3 LS Swap</li>
+          <li>Dakota Digital Gauges</li>
+          <li>Frame-Off Restored</li>
+          <li>5-Speed Manual</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1984 Ford Bronco -->
+    <div class="inventory-card sold-card">
+      <div class="inventory-slider square">
+        <img src="assets/truck5.jpeg" class="active">
+        <div class="sold-overlay"></div>
+        <div class="sold-stamp">SOLD</div>
+      </div>
+      <div class="inventory-info text-center">
+        <h3>1984 Ford Bronco</h3>
+        <ul>
+          <li>5.8 CI V8</li>
+          <li>Frame-Off Restored</li>
+          <li>Custom Interior</li>
+          <li>4” Lift</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="build-gallery-section">
+  <h2 class="build-gallery-title" style="font-family:Rocket Thunder ;">1973 Ford Bronco — Build Gallery</h2>
+
+  <div class="build-gallery-grid">
+    <img src="assets/BUILDblue.jpeg" alt="Bronco build photo 1">
+    <img src="assets/BUILDblue2.jpeg" alt="Bronco build photo 2">
+    <img src="assets/IMG_6987.jpg" alt="Bronco build photo 3">
+    <img src="assets/BUILDblue4.jpeg" alt="Bronco build photo 4">
+  
+  </div>
+</section>
+
+<section class="build-gallery-section">
+  <h2 class="build-gallery-title" style="font-family:Rocket Thunder ;">1975 Ford Bronco — Build Gallery</h2>
+
+  <div class="build-gallery-grid">
+    <img src="assets/greenbuild.jpeg" alt="Bronco build photo 1">
+    <img src="assets/greenbuild2.jpeg" alt="Bronco build photo 2">
+    <img src="assets/greenbuild3.jpeg" alt="Bronco build photo 3">
+    <img src="assets/greenbuild4.jpeg" alt="Bronco build photo 4">
+  
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.inventory-section{padding:100px 20px;background:#f6f0e5}
+.inventory-title{text-align:center;font-family:'Rocket Thunder',sans-serif;font-size:3.5rem;color:#4b0d0d;margin-bottom:60px}
+.inventory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:1100px;margin:0 auto}
+.inventory-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.inventory-slider.square{position:relative;aspect-ratio:1/1;overflow:hidden}
+.inventory-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:.4s}
+.inventory-slider img.active{opacity:1}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:none;color:#fff;font-size:2rem;padding:4px 10px;cursor:pointer;z-index:3}
+.slider-btn.prev{left:8px}.slider-btn.next{right:8px}
+.inventory-overlay{position:absolute;bottom:0;width:100%;padding:12px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff}
+.inventory-info{padding:18px}
+.inventory-info li{font-size:.9rem;margin-bottom:6px}
+.inventory-price{font-size:1.4rem;font-weight:700;color:#8f2d2a}
+@media(max-width:768px){.inventory-grid{grid-template-columns:1fr}}
+</style>
+
+<script>
+function slideCar(btn,dir){
+  const s=btn.closest('.inventory-slider'),
+        i=s.querySelectorAll('img');
+  let x=parseInt(s.dataset.index);
+  i[x].classList.remove('active');
+  x=(x+dir+i.length)%i.length;
+  i[x].classList.add('active');
+  s.dataset.index=x;
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-us-section">
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+    <p>
+      Have a question about a vehicle or want to start your build?
+      Reach out — we’d love to hear from you.
+    </p>
+
+    <form class="contact-form">
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" class="form-control" placeholder="Your Email" required>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-btn">
+        Send Message <span class="contact-arrow">→</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- FOOTER -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer mt-5">
+  <div class="container py-4">
+    <div class="row align-items-center">
+      
+      <!-- Contact Info -->
+      <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
+        <p class="mb-1"><strong>SALES:</strong> (267) 400-6982</p>
+        <a href="mailto:sales@shanesgarage.com" class="footer-link">sales@shanesgarage.com</a>
+        <hr class="d-md-none my-2">
+        <p class="mb-1 mt-2"><strong>TRANSPORT:</strong> (267) 400-6982</p>
+        <a href="mailto:transport@shanesgarage.com" class="footer-link">transport@shanesgarage.com</a>
+      </div>
+
+      <!-- Logo -->
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <img src="assets/logo2.png" alt="Shane’s Garage Logo" style="height:100px;">
+      </div>
+
+      <!-- Social Icons -->
+      <div class="col-md-4 text-md-end text-center">
+        <a href="https://www.instagram.com/shanesgarage_" target="_blank" class="footer-social me-2">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="#" class="footer-social me-2">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="#" class="footer-social">
+          <i class="fas fa-bars fa-lg"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom text-center py-2" style="background-color:#010000; color:#fff;">
+  FL 32206 | &copy; 2025 Shane’s Garage | All Rights Reserved | 
+  <a href="https://eliseowebdev.com" target="_blank" class="footer-credit">
+    Custom coded by EliseoWebDev.com
+  </a>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+.footer-credit {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-credit:hover {
+  color: #9e0000;
+  text-shadow: 0 0 5px #470000, 0 0 10px #ff0000, 0 0 20px #00ff15;
+}
+</style>
+</footer>
+
+<style>
+.footer {
+  background-color: #f6f0e5;
+  color: #4b0d0d;
+  font-family: 'Oswald', sans-serif;
+}
+
+.footer-link {
+  color: #8f422a;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  color: #8f422a;
+}
+
+.footer-social:hover {
+  color: #4b0d0d;
+}
+</style>
+
+
+
+
+
+
+
+</body>
+<script>
+  // Shrink navbar on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.custom-nav');
+    if(window.scrollY > 50) { // scroll down 50px
+      navbar.classList.add('shrink');
+    } else {
+      navbar.classList.remove('shrink');
+    }
+  });
+</script>
+
+</html>
