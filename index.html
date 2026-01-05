@@ -32,7 +32,7 @@
       display: flex;
       justify-content: center;
       padding: 0px 0;
-      background: rgba(163, 0, 0, 0.945);
+      background: rgba(163, 0, 0, 0);
       z-index: 1000;
     }
 
@@ -74,13 +74,13 @@
     }
 
     .nav-logo img {
-      height: 185px;
+      height: 150px;
     }
 
     /* HERO SECTION */
     .hero {
       height: 110vh;
-      background: url("assets/Shanes Garages (29).png") center / cover no-repeat;
+      background: url("assets/hero2.png") center / cover no-repeat;
       padding-top: 160px;
       position: relative;
     }
@@ -192,7 +192,7 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <img src="assets/Shanes Garages (29).png" alt="Shane’s Garage" class="hero-mobile-img">
+    <img src="assets/hero2.png" alt="Shane’s Garage" class="hero-mobile-img">
   </section>
 <!-- ABOUT US SECTION -->
 <!-- ABOUT US SECTION -->
@@ -215,13 +215,13 @@
 /* ABOUT US SECTION */
 .about-us-section {
   position: relative;
-  background: url('assets/aboutus.png') center / cover no-repeat;
+  background: url('assets/backgou.png') center / cover no-repeat;
   padding: 8rem 1rem;
   color: #fff;
 }
 
 .about-us-overlay {
-  background: rgba(144, 0, 0, 0.5); /* dark overlay for readability */
+  background: rgba(143, 231, 255, 0.559); /* dark overlay for readability */
   padding: 5rem 1rem;
 }
 
@@ -377,7 +377,7 @@
 }
 </style>
 
-<section class="features-section">
+<section class="features-section" id="features-section">
   <h2>Top Quality Vintage Vehicles<br>Without the Showroom Price</h2>
 
   <div class="features-grid">
@@ -515,6 +515,20 @@
 
 
 <style>
+  html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, svg {
+  max-width: 101%;
+  height: auto;
+}
+
 @font-face {
   font-family: 'Rocket Thunder';
   src: url('assets/fonts/rocket-thunder.ttf') format('truetype');
