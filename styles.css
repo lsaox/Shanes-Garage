@@ -515,3 +515,40 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
   }
 }
+/* =========================
+   GLOBAL MOBILE HEADER FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  /* MAIN SECTION HEADERS */
+  h1,
+  h2 {
+    font-size: 2rem !important;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+  }
+
+  /* SUB HEADERS */
+  h3 {
+    font-size: 1.15rem !important;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  /* OPTIONAL: tighten paragraphs slightly */
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+  h1,}
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  h3 {
+    font-size: 1.05r}
